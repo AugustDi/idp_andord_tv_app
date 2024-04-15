@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme.AppScreenPulse" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>
