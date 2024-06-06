@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="Manifest.permission.MANAGE_DEVICE_POLICY_LOCK_TASK"/>
 
     <uses-feature
         android:name="android.hardware.touchscreen"
@@ -36,6 +37,9 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
     </application>

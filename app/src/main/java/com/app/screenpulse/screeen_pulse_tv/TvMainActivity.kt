@@ -1,6 +1,8 @@
 package com.app.screenpulse.screeen_pulse_tv
 
 import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,7 +28,12 @@ class TvMainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        initLastAppVisit()
+        IntentFilter(Intent.ACTION_MAIN)
+            .apply {
+                addCategory(Intent.CATEGORY_HOME)
+                addCategory(Intent.CATEGORY_DEFAULT)
+            }
+
         setContent {
             val navController = rememberNavController()
 
